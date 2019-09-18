@@ -1,13 +1,3 @@
-.par {
-  margin: 0;
-  color: #858598;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 1px;
-}
-
 .overlay {
   top: 50%;
   left: 50%;
@@ -32,13 +22,24 @@
   border-radius: 6px;
 }
 
-.formCreateGoal {
+.form {
   width: 600px;
+  height: 460px;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-48%, -50%);
   z-index: 12;
+}
+
+.label {
+  margin: 0;
+  color: #858598;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 1px;
 }
 
 .input {
@@ -46,8 +47,9 @@
   margin-bottom: 30px;
   padding-top: 6px;
   padding-bottom: 6px;
-  width: 584px;
+  width: 560px;
   border-bottom: 1px solid #e0e0e0;
+  outline: none;
 }
 
 .textarea::placeholder,
@@ -62,28 +64,88 @@
 .textarea {
   resize: none;
   border: 0;
-  width: 566px;
-  margin-top: 14px;
-  padding-top: 12px;
-  padding-left: 14px;
+  width: 520px;
+  height: 140px;
+  margin-top: 8px;
+  margin-bottom: 28px;
+  padding: 22px;
   color: #000;
   font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 400;
   border-radius: 3px;
   box-shadow: 2px 4px 23px 6px rgba(29, 29, 27, 0.05);
+  outline: none;
 }
 
 .button {
   border: 0;
   display: block;
-  margin-top: 28px;
   min-height: 48px;
   width: 200px;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
   background-color: #edb445;
   border-radius: 24px;
   box-shadow: 0 8px 29px rgba(178, 138, 61, 0.31);
+  cursor: pointer;
+}
+
+@media (max-width: 1279px) {
+  .modal {
+    width: 680px;
+    height: 600px;
+    transform: translate(-50%, -50%);
+  }
+
+  .form {
+    width: 560px;
+    height: 436px;
+    transform: translate(-48%, -58%);
+  }
+
+  .label {
+    line-height: 30px;
+  }
+
+  .input {
+    margin-bottom: 20px;
+    width: 526px;
+  }
+
+  .textarea {
+    width: 484px;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal {
+    width: 300px;
+    height: 530px;
+  }
+
+  .form {
+    width: 250px;
+    transform: translate(-48%, -48%);
+    height: 490px;
+  }
+
+  .label {
+    font-size: 22px;
+  }
+
+  .input {
+    width: 240px;
+  }
+
+  .textarea {
+    width: 206px;
+    padding: 18px;
+  }
+
+  .button {
+    margin: 0 auto;
+  }
 }

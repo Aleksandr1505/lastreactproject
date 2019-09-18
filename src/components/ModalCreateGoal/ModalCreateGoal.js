@@ -8,8 +8,8 @@ class ModalCreateGoal extends Component {
     return (
       <div className={s.overlay}>
         <div className={s.modal}>
-          <form className={s.formCreateGoal}>
-            <label className={s.par}>
+          <form className={s.form}>
+            <label className={s.label}>
               Що я хочу
               <input
                 className={s.input}
@@ -18,7 +18,7 @@ class ModalCreateGoal extends Component {
                 placeholder="Дай своїй меті назву"
               />
             </label>
-            <label className={s.par}>
+            <label className={s.label}>
               Скільки балів треба набрати
               <input
                 className={s.input}
